@@ -7,9 +7,9 @@ ENV ARTIFACTORY_VERSION=5.1.4 \
 RUN rm -rf webapps/
 
 RUN apk add --update openssl unzip \
-    && wget -O artifactory.zip https://jfrog.bintray.com/artifactory/jfrog-artifactory-oss-${ARTIFACTORY_VERSION}.zip \
-    && unzip -j artifactory.zip "artifactory-*/webapps/artifactory.war" -d webapps/ \
-    && rm artifactory.zip \
-    && apk del openssl unzip
+   && wget -O artifactory.zip https://jfrog.bintray.com/artifactory/jfrog-artifactory-oss-${ARTIFACTORY_VERSION}.zip \
+   && unzip -j artifactory.zip "artifactory-*/webapps/artifactory.war" -d webapps/ \
+   && rm artifactory.zip \
+   && apk del openssl unzip
 
 WORKDIR /artifactory
