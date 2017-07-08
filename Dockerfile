@@ -12,4 +12,3 @@ RUN apk add --update openssl unzip \
    && rm artifactory.zip \
    && apk del openssl unzip
 
-WORKDIR /artifactory
